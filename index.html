@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Viral Bouncing Ball Physics Simulation — 1,000 Ball Finale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-wrapper">
+    <div class="stage-container" id="stageContainer" title="Click or tap anywhere to unlock synthesized Web Audio">
+      <canvas id="simCanvas"></canvas>
+
+      <!-- Top Centered UI -->
+      <div class="top-hud">
+        <h1 class="viral-headline">Every time a ball escapes 3 new balls spawn</h1>
+        <div class="status-Row">
+          <button type="button" class="audio-pill" id="audioToggleBtn" aria-label="Toggle Web Audio sound effects">
+            <span class="dot" id="audioDot"></span>
+            <span id="audioStatusText">Tap for Sound</span>
+          </button>
+          <span class="perf-badge" id="fpsBadge">60 FPS</span>
+        </div>
+      </div>
+
+      <!-- Finale Overlay Banner -->
+      <div class="finale-banner" id="finaleBanner">
+        <div class="finale-title">1,000 BALL FINALE!</div>
+        <p class="finale-sub" id="finaleSubText">Ring destroyed! All 1,000 neon balls exploded outward.</p>
+        <button type="button" class="finale-restart-btn" id="bannerRestartBtn">Play Again</button>
+      </div>
+
+      <!-- Bottom Centered Large Counter & Controls -->
+      <div class="bottom-hud">
+        <div class="counter-block">
+          <div class="counter-label">Active Balls</div>
+          <div class="ball-counter" id="ballCounter">1</div>
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <div class="control-bar" id="controlBar">
+          <button type="button" class="ctrl-btn" id="pauseBtn">Pause</button>
+          <button type="button" class="ctrl-btn accent" id="spawnBoostBtn">+3 Balls</button>
+          <button type="button" class="ctrl-btn accent" id="spawn50Btn">+50 Balls</button>
+          <button type="button" class="ctrl-btn warn" id="finaleTestBtn">1,000 Finale</button>
+          <button type="button" class="ctrl-btn" id="resetBtn">Reset</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
